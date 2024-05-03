@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col gap-1">
   <div class="flex grow flex-row justify-between gap-1 flex-wrap">
     <app-product
       *ngFor="let product of products"
@@ -6,4 +6,12 @@
       (productOutput)="onProductOutput($event)"
     ></app-product>
   </div>
+
+  <p-paginator
+    [first]="first"
+    [rows]="rows"
+    (onPageChange)="onPageChange($event)"
+    [totalRecords]="totalRecords"
+    [rowsPerPageOptions]="[5, 10, 20]"
+  ></p-paginator>
 </div>
