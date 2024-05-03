@@ -1,0 +1,58 @@
+<p-dialog
+  [header]="header"
+  [(visible)]="display"
+  [modal]="true"
+  [closable]="false"
+>
+  <div class="flex flex-col gap-1">
+    <div class="flex flex-row gap-1">
+      <span class="font-light text-base">Name:</span>
+      <input
+        pInputText
+        type="text"
+        [(ngModel)]="product.name"
+        placeholder="Enter product name"
+      />
+    </div>
+    <div class="flex flex-row gap-1">
+      <span class="font-light text-base">Price:</span>
+      <input
+        pInputText
+        type="number"
+        [(ngModel)]="product.price"
+        placeholder="Enter product price"
+      />
+    </div>
+    <div class="flex flex-row gap-1">
+      <span class="font-light text-base">Image:</span>
+      <input
+        pInputText
+        type="text"
+        [(ngModel)]="product.image"
+        placeholder="Enter product image URL"
+      />
+    </div>
+    <div class="flex flex-row gap-1">
+      <span class="font-light text-base">Rating:</span>
+      <p-rating [(ngModel)]="product.rating" [cancel]="false"></p-rating>
+    </div>
+  </div>
+  <p-footer>
+    <button
+      pButton
+      type="button"
+      label="Add"
+      class="p-button-text"
+      icon="pi pi-check"
+      (click)="onConfirm()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Cancel"
+      class="p-button-text"
+      icon="pi pi-times"
+      (click)="onCancel()"
+    ></button>
+  </p-footer>
+</p-dialog>
