@@ -5,8 +5,10 @@
     label="Add Product"
     icon="pi pi-plus"
     (click)="toggleAddPopup()"
+    class="add-product-btn"
   ></button>
-  <div class="flex grow flex-row justify-between gap-1 flex-wrap">
+
+  <div class="flex grow flex-row justify-between gap-2 flex-wrap">
     <app-product
       *ngFor="let product of products"
       [product]="product"

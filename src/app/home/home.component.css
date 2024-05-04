@@ -1,0 +1,3 @@
+.add-product-btn {
+  @apply fixed bottom-2 right-2 z-10 shadow-md;
+}
