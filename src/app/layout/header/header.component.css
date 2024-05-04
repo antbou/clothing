@@ -1,0 +1,7 @@
+a {
+  @apply hover:underline font-bold;
+}
+
+a.active {
+  @apply underline text-blue-500 font-bold;
+}
