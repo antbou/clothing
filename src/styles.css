@@ -33,3 +33,10 @@ app-root {
 .full-center {
   @apply flex items-center justify-center;
 }
+
+input.ng-invalid {
+  @apply border-red-500 border-2 border-solid rounded-md;
+}
+input.ng-valid {
+  @apply border-2 border-solid rounded-md;
+}
